@@ -3,4 +3,7 @@
     <string name="app_name">ProgramaFirebase</string>
     <string name="myAccount">Minha Conta</string>
     <string name="people">Pessoas</string>
+    <string name="signIn">Entrar</string>
+    <string name="fireMessages">Enviar mensagens</string>
+    <string name="appname">Nome da aplicação</string>
 </resources>
