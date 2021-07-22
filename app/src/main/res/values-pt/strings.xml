@@ -6,4 +6,6 @@
     <string name="signIn">Entrar</string>
     <string name="fireMessages">Enviar mensagens</string>
     <string name="appname">Nome da aplicação</string>
+    <string name="save">Guardar</string>
+    <string name="signOut">Sair</string>
 </resources>

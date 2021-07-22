@@ -2,6 +2,8 @@ package com.example.programafirebase
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
+import com.example.programafirebase.fragment.MyAccountFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
@@ -17,11 +19,17 @@ class MainActivity : AppCompatActivity() {
                     true
                 }
                 R.id.navigation_myAccount -> {
-                    //TODO: Show my account fragment
+                    replaceFragment(MyAccountFragment())
                     true
                 }
                 else -> false
             }
         }
+    }
+
+    private fun replaceFragment(fragment: Fragment) {
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.fragment_layout, fragment)
+            .commit()
     }
 }
