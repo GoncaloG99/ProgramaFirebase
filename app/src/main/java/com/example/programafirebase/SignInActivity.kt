@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
+import com.example.programafirebase.util.FirestoreUtil
 import com.firebase.ui.auth.AuthUI
 import com.firebase.ui.auth.ErrorCodes
 import com.firebase.ui.auth.IdpResponse
@@ -49,19 +50,20 @@ class SignInActivity : AppCompatActivity() {
             val response = IdpResponse.fromResultIntent(data)
 
             if (resultCode == Activity.RESULT_OK) {
-                val progressDialog = indeterminateProgressDialog("cSetting up your acount")
-                //TODO: Initialize current user in Firestore
-                startActivity(intentFor<MainActivity>().newTask().clearTask())
-                progressDialog.dismiss()
+                val progressDialog = indeterminateProgressDialog(R.string.accountSetUp)
+                FirestoreUtil.initCurrentUserIfFirstTime {
+                    startActivity(intentFor<MainActivity>().newTask().clearTask())
+                    progressDialog.dismiss()
+                }
             }
             else if (resultCode == Activity.RESULT_CANCELED) {
                 if (response == null) return
 
                 when (response.error?.errorCode) {
                     ErrorCodes.NO_NETWORK ->
-                        longSnackbar(constraint_layout, "No network")
+                        longSnackbar(constraint_layout, R.string.noNetwork)
                     ErrorCodes.UNKNOWN_ERROR ->
-                        longSnackbar(constraint_layout, "Unknown error")
+                        longSnackbar(constraint_layout, R.string.unknownError)
                 }
             }
         }

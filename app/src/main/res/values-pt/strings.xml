@@ -4,8 +4,10 @@
     <string name="myAccount">Minha Conta</string>
     <string name="people">Pessoas</string>
     <string name="signIn">Entrar</string>
-    <string name="fireMessages">Enviar mensagens</string>
-    <string name="appname">Nome da aplicação</string>
     <string name="save">Guardar</string>
     <string name="signOut">Sair</string>
+    <string name="person">Pessoa</string>
+    <string name="unknownError">Erro desconhecido</string>
+    <string name="noNetwork">Não á rede</string>
+    <string name="accountSetUp">Creating account</string>
 </resources>

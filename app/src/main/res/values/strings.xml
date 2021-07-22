@@ -3,10 +3,14 @@
     <string name="people">People</string>
     <string name="myAccount">My Account</string>
     <string name="signIn">Sign in</string>
-    <string name="appname">Application name</string>
-    <string name="fireMessages">Sending messages</string>
+    <string name="fireMessages" translatable="false">Programa Firebase</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
     <string name="save">Save</string>
     <string name="signOut">Sign out</string>
+    <string name="person">Person</string>
+    <string name="unknownError">Unknown error</string>
+    <string name="noNetwork">No network</string>
+    <string name="accountSetUp">Creating account</string>
+    <string name="appname" translatable="false">Programa Firebase</string>
 </resources>
